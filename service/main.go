@@ -17,7 +17,7 @@ func getenvOrDefault(s string, s2 string) string {
 }
 
 func main() {
-	log.Println("Starting service...")
+	log.Println("Starting service...", hostname)
 
 	http.HandleFunc("/health", healthHandler)
 	http.HandleFunc("/", endpointHandler)

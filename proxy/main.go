@@ -12,7 +12,7 @@ var UPSTREAM_URL = os.Getenv("UPSTREAM_URL")
 var hostname, _ = os.Hostname()
 
 func main() {
-	log.Println("Starting proxy...")
+	log.Println("Starting proxy...", hostname)
 	log.Println("UPSTREAM_URL", UPSTREAM_URL)
 
 	http.HandleFunc("/health", healthHandler)
